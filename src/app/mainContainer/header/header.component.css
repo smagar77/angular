@@ -1,0 +1,50 @@
+.header{
+  background:#52a3fd;
+  width:100%;
+}
+.logo{
+  width:30%;
+  float:left;
+  padding: 10px;
+  margin:10px 0 0 10px;
+}
+.header-text{
+  float:right;
+  width:65%;
+  margin-top:10%;
+  color:#fff;
+}
+.header-text h4{
+  font-size:20px;
+}
+
+.subtitle{
+  text-align:right;
+  margin-right:70px;
+  font-size:15px;
+}
+
+ul.tags{
+  list-style:none;
+}
+
+ul.tags li{
+  float:left;
+  padding:7px;
+  margin:2px;
+  background:#4553e9;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.remove-tag{
+  color: #c71515;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.clear{
+  clear:both;
+}

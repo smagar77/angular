@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="logo">
+    <img src="assets/angular.png" width="150"/>
+  </div>
+  <div class="header-text">
+    <h4>{{"WELCOME, "+header_title.toUpperCase()}}</h4>
+    <h5 class="subtitle">{{subText()}}</h5>
+    <div [ngStyle]="{'float':'left', 'width':'100%'}">
+      <ul class="tags">
+        <li *ngFor="let tag of tags; index as i">{{i}}#{{tag.name}}<span class="remove-tag" (click)="remove_tag(i)">x</span></li>
+      </ul>
+    </div>
+    <div [ngStyle]="{'float':'left', 'width':'100%', 'text-align':'right'}">
+      <input type="text" bind-placeholder="enter_tag" name="tag" #tag size="7">
+      <button class="btn-success" (click)="add_tag(tag)" [ngStyle]="{'padding':'4px', 'margin':'5px'}">add tag</button>
+    </div>
+  </div>
+  <input type="text" [hidden]="true" [disabled]="true" name="test-text" />
+  <input type="text" [hidden]="true" name="test-hidden" />
+  <div class="clear"></div>
+</div>
+<h5>{{input_bind}}<=>{{output_bind}}</h5>
+<div class="clear"></div>

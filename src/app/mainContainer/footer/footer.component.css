@@ -1,0 +1,24 @@
+.footer-container{
+  height:40px;
+  background:#888;
+}
+
+.footer-text{
+    text-align: right;
+    padding: 10px 10px 0 0;
+}
+
+.footer-left{
+  float: left;
+  width: 60%;
+  font-size: 14px;
+}
+.footer-right{
+  float: right;
+  width: 40%;
+  font-size: 14px;
+}
+
+.clear{
+  clear:both;
+}

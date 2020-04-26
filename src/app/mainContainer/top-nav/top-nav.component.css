@@ -1,0 +1,41 @@
+.topnav{
+  background: #488edd;
+  color:#fff;
+}
+.brand{
+  float:left;
+  width:20%;
+  margin: 10px 0 0 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.brand a{
+  color:#fff;
+  text-decoration:none;
+}
+
+.toplinks{
+  float:right;
+  width:78%;
+  text-align:right;
+  padding:10px 0px;
+}
+
+.toplinks a{
+  color:#fff;
+  margin:0 8px;
+  font-size:18px;
+  text-decoration:none;
+}
+.toplinks .active{
+  color:#000
+}
+
+.toplinks a:hover{
+  color:#000;
+}
+
+.clear{
+  clear:both;
+}

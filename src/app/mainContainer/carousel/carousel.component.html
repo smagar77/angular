@@ -1,0 +1,32 @@
+<div *ngIf="is_slider; then slider_show else slider_hide"></div>
+<ng-template #slider_show>
+  <button [ngStyle]="{'background':'#333', 'color':'#fff', 'padding':'2px'}" (click)="toggle_slider(false)">Hide Carousel</button>
+  <div>
+  <carousel [isAnimated]="true">
+    <slide>
+      <img src="assets/carousel/01.jpg" alt="first slide" style="display: block; width: 100%; height:90%;">
+    </slide>
+    <slide>
+      <img src="assets/carousel/02.jpg" alt="second slide" style="display: block; width: 100%; height:90%;">
+    </slide>
+    <slide>
+      <img src="assets/carousel/03.jpg" alt="third slide" style="display: block; width: 100%; height:90%;">
+    </slide>
+    <slide>
+      <img src="assets/carousel/04.jpg" alt="third slide" style="display: block; width: 100%; height:90%;">
+    </slide>
+    <slide>
+      <img src="assets/carousel/05.jpg" alt="third slide" style="display: block; width: 100%; height:90%; height:90%;">
+    </slide>
+    <slide>
+      <img src="assets/carousel/06.jpg" alt="third slide" style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="assets/carousel/07.jpg" alt="third slide" style="display: block; width: 100%;">
+    </slide>
+  </carousel>
+  </div>
+</ng-template>
+<ng-template #slider_hide>
+  <button [ngStyle]="{'background':'#333', 'color':'#fff', 'padding':'2px'}" (click)="toggle_slider(true)">Show Carousel</button>
+</ng-template>

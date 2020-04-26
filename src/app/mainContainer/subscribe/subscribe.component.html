@@ -1,0 +1,38 @@
+<div [ngStyle]="subscribe_style">
+  <input type="text" placeholder="Email Address" [(ngModel)]="email_address" /><button (click)="onSubscribe()">{{message? "Subscribed" : "Subscribe Now"}}</button>
+  <div [ngStyle]="{'margin-top':'12px'}">
+  <textarea #comment placeholder="Comment" type="text" value="{{email_address}}" (input)="onInputClick($event)" name="comment"></textarea>
+    <div class="btn-group" [ngClass]="dropdown_class" dropdown>
+      <select class="form-control" (change)="getProperty($event)" [ngStyle]="{'width':'25%'}">
+        <option>Pune</option>
+        <option>Mumbai</option>
+        <option>Banglore</option>
+        <option>Delhi</option>
+      </select>
+      <div [ngSwitch]="selected_location">
+        <span *ngSwitchCase="'Pune'">Pune</span>
+        <span *ngSwitchCase="'Mumbai'">Mumbai</span>
+        <span *ngSwitchCase="'Banglore'">Banglore</span>
+        <span *ngSwitchCase="'Delhi'">Delhi</span>
+      </div>
+<!--    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">Location<span class="caret"></span></button>-->
+<!--    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"-->
+<!--        role="menu" aria-labelledby="button-basic">-->
+<!--      <li role="Pune"><a class="dropdown-item" href="#">Pune</a></li>-->
+<!--      <li role="Mumbai"><a class="dropdown-item" href="#">Mumbai</a></li>-->
+<!--      <li role="Banglore"><a class="dropdown-item" href="#">Banglore</a></li>-->
+<!--      <li class="divider dropdown-divider"></li>-->
+<!--      <li role="Delhi"><a class="dropdown-item" href="#">Delhi</a>-->
+<!--      </li>-->
+<!--    </ul>-->
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <input type="text" placeholder="Daterangepicker" class="form-control" bsDaterangepicker>
+    </div>
+  </div>
+  <button (click)="getComment(comment)">save</button>
+  </div>
+  <p>{{email_address}}</p>
+  <p>Runtime:-{{input_text}}, After save:- {{comment_value}}</p>
+</div>

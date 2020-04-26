@@ -1,0 +1,11 @@
+<div class="topnav">
+  <div class="brand"><a href="/home">VLayer!</a></div>
+  <div class="toplinks">
+    <a routerLinkActive="active" routerLink="/home" [routerLinkActiveOptions]="{exact:true}" >Home</a>
+    <a routerLinkActive="active" routerLink="/users">Matches</a>
+    <a routerLinkActive="active" routerLink="/about">About</a>
+    <a routerLinkActive="active" routerLink="/contact">Contact Us</a>
+    <a routerLinkActive="active" bind-href="login_status? logout_url : login_url">{{login_status? "Log Out" : "Log In" }}</a>
+  </div>
+  <div class="clear"></div>
+</div>
