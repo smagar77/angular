@@ -21,17 +21,21 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MatchComponent } from './match/match.component';
 import { MatchdetailsComponent } from './matchdetails/matchdetails.component';
 import { WarningComponent } from './warning/warning.component';
 import { HelperService } from './appServices/helper.service';
 import { LogoutComponent } from './logout/logout.component';
+import { UsersComponent } from './users/users.component';
 const appRouts:Routes = [
   { path:'', redirectTo:'login', pathMatch:'full' },
   { path:'home', component:HomeComponent },
   { path:'login', component:LoginComponent },
+  { path:'register', component:RegisterComponent },
   { path:'logout', component:LogoutComponent },
+  { path:'users', component:UsersComponent},
   { path:'matches', children:[
     {path:'', component:MatchComponent},
     {path:'matchdetails', component:MatchdetailsComponent},
@@ -62,6 +66,8 @@ const appRouts:Routes = [
     MatchdetailsComponent,
     WarningComponent,
     LogoutComponent,
+    UsersComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

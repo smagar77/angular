@@ -1,7 +1,13 @@
+.login_user{
+  float: right;
+  margin: 12px 5px 0 0;
+}
+
 .topnav{
   background: #488edd;
   color:#fff;
 }
+
 .brand{
   float:left;
   width:20%;
@@ -17,9 +23,14 @@
 
 .toplinks{
   float:right;
-  width:78%;
+  width:40%;
   text-align:right;
   padding:10px 0px;
+  list-style-type:none;
+}
+
+.toplinks li{
+  float:left;
 }
 
 .toplinks a{
@@ -28,6 +39,7 @@
   font-size:18px;
   text-decoration:none;
 }
+
 .toplinks .active{
   color:#000
 }

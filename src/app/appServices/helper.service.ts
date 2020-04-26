@@ -21,6 +21,7 @@ export class HelperService {
     return new Date()
   }
 
+  //user login method get's access token from backend(flask) layer
   user_login(username, password):Observable<any>{
     var data:any = {
     'username':username,
@@ -32,4 +33,21 @@ export class HelperService {
     //return this.http.get<any>('http://127.0.0.1:5000/users/');
   }
 
+  //retrieves all users from backend
+  get_users(){
+    return this.http.get<any>('http://localhost:5000/users/');
+  }
+
+  register(data){
+    var data:any = {
+      'username':data.username.value,
+      'password':data.password.value,
+      'first_name':data.first_name.value,
+      'last_name':data.last_name.value,
+      'email':data.email.value,
+    }
+    var header = {'Content-Type':'application/json'}
+    data = JSON.stringify(data)
+    return this.http.post<any>('http://127.0.0.1:5000/users/add_user/', data, {'headers':header});
+  }
 }

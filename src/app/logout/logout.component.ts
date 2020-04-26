@@ -10,8 +10,10 @@ export class LogoutComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    //Remove access token on logout and navigate to login
     localStorage.removeItem('access_token')
-    this.router.navigate(['/login'])
+    //this.router.navigate(['/login'])
+    window.location.href='/login'
   }
 
 }

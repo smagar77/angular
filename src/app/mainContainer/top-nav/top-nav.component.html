@@ -1,11 +1,16 @@
 <div class="topnav">
   <div class="brand"><a href="/home">VLayer!</a></div>
-  <div class="toplinks">
-    <a routerLinkActive="active" routerLink="/home" [routerLinkActiveOptions]="{exact:true}" >Home</a>
-    <a routerLinkActive="active" routerLink="/users">Matches</a>
-    <a routerLinkActive="active" routerLink="/about">About</a>
-    <a routerLinkActive="active" routerLink="/contact">Contact Us</a>
-    <a routerLinkActive="active" bind-href="login_status? logout_url : login_url">{{login_status? "Log Out" : "Log In" }}</a>
+  <div class="login_user" *ngIf="login_status">
+    Welcome {{username}}({{userid}})
   </div>
+  <ul class="toplinks">
+    <li *ngFor="let menu of main_nav;">
+      <a routerLinkActive="active" routerLink="{{menu.url}}" [routerLinkActiveOptions]="{exact:true}" >{{menu.label}}</a>
+    </li>
+<!--    <a routerLinkActive="active" routerLink="/users">Users</a>-->
+<!--    <a routerLinkActive="active" routerLink="/about">About</a>-->
+<!--    <a routerLinkActive="active" routerLink="/contact">Contact Us</a>-->
+<!--    <a routerLinkActive="active" bind-href="login_status? logout_url : login_url">{{login_status? "Log Out" : "Log In" }}</a>-->
+  </ul>
   <div class="clear"></div>
 </div>
