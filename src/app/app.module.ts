@@ -29,6 +29,8 @@ import { WarningComponent } from './warning/warning.component';
 import { HelperService } from './appServices/helper.service';
 import { LogoutComponent } from './logout/logout.component';
 import { UsersComponent } from './users/users.component';
+import { CustomPipe } from './appPipes/custom.pipe';
+import { UserfilterPipe } from './appPipes/userfilter.pipe'
 const appRouts:Routes = [
   { path:'', redirectTo:'login', pathMatch:'full' },
   { path:'home', component:HomeComponent },
@@ -67,7 +69,9 @@ const appRouts:Routes = [
     WarningComponent,
     LogoutComponent,
     UsersComponent,
-    RegisterComponent
+    RegisterComponent,
+    CustomPipe,
+    UserfilterPipe
   ],
   imports: [
     BrowserModule,

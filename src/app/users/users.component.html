@@ -1,4 +1,7 @@
 <h5>Users List</h5>
+<input placeholder="Search Users" type="text" name="search" size="62" [(ngModel)]="userSearch">
+<br/>
+<br/>
 <table>
   <thead>
     <tr row>
@@ -11,13 +14,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users; index as i">
+    <tr *ngFor="let user of users|userfilter:userSearch; index as i">
       <td>{{i+1}}</td>
       <td>{{user.username}}</td>
       <td>{{user.first_name}}</td>
       <td>{{user.last_name}}</td>
       <td>{{user.email}}</td>
-      <td>{{user.created_on}}</td>
+      <td>{{user.created_on | custompipe | date}}</td>
     </tr>
   </tbody>
 </table>

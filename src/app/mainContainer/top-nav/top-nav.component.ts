@@ -8,9 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class TopNavComponent implements OnInit {
 
   access_token:string = '';
-  login_status:boolean = false;
-  login_url:string = "";
-  logout_url:string = "";
   constructor() {}
 
   //Main navigation array conditionally changed by login status
