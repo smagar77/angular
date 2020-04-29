@@ -1,8 +1,37 @@
 <div class="contact">
-  <div class="address">
+  <ul class="nav-container">
+    <li [class.active]="country=='india'" ><a (click)="country='india'">India</a></li>
+    <li [class.active]="country=='us'"><a (click)="country='us'">US</a></li>
+    <li [class.active]="country=='australia'"><a (click)="country='australia'">Australia</a></li>
+    <li [class.active]="country=='brazil'"><a (click)="country='brazil'">Brazil</a></li>
+  </ul>
+  <div [ngSwitch]="country">
+    <div *ngSwitchCase="'india'">
+      Hinjewadi phase-II,<br />
+      Pune-21,<br />
+      India<br />
+    </div>
+    <div class="address" *ngSwitchCase="'us'">
         Mr John Smith<br />
         132, My Street,<br />
         Kingston, New York 12401<br />
         United States
+    </div>
+    <div class="address" *ngSwitchCase="'australia'">
+        Mr Andy Appleton, Surfin',<br />
+        Sam Ltd Suite 10a,<br />
+        11 Hinkley Road,<br />
+        DAWES POINT,<br />
+        NSW 2000, AUSTRALIA
+    </div>
+    <div class="address" *ngSwitchCase="'brazil'">
+      Lívia Amaral<br />
+      Av. Paulista, 1098, 1º andar, <br />
+      apto. 101<br />
+      Bela Vista<br />
+      São Paulo - SP<br />
+      Brasil 01310-000
+    </div>
+    <div *ngSwitchDefault>None</div>
   </div>
 </div>

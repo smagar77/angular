@@ -1,0 +1,15 @@
+.block-container{
+  padding:30px;
+  text-align:center;
+  border: 1px solid #ccc;
+  margin:5px;
+}
+
+.block-container .name{
+  margin:5px 0;
+}
+
+.btn-primary{
+  margin-left:10px;
+}
+

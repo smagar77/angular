@@ -41,7 +41,7 @@ export class HeaderComponent implements OnInit {
   }
   enter_tag:string = 'tag name'
 
-  //Component communication
+  //Component communication, @Input makes input_bind available to  it's parent
   @Input() input_bind:string="Input from child"
   output_bind:any = 'Output from child'
 }

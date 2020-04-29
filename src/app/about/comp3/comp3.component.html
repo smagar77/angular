@@ -1,0 +1,6 @@
+<div class="block-container">
+  <div class="name">Name: {{subject_name}}</div>
+  <ng-content></ng-content>
+  <input type="text" placeholder="update name" #update_name>
+  <button (click)="updateOnClick(update_name)" class="btn btn-primary">Update</button>
+</div>

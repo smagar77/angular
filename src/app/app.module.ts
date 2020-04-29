@@ -31,6 +31,12 @@ import { LogoutComponent } from './logout/logout.component';
 import { UsersComponent } from './users/users.component';
 import { CustomPipe } from './appPipes/custom.pipe';
 import { UserfilterPipe } from './appPipes/userfilter.pipe'
+import { CustomDirective } from './appDirectives/custom.directive';
+import { Comp1Component } from './about/comp1/comp1.component';
+import { Comp2Component } from './about/comp2/comp2.component';
+import { Comp3Component } from './about/comp3/comp3.component';
+import { Comp4Component } from './about/comp4/comp4.component';
+import { CompChildComponent } from './about/comp-child/comp-child.component'
 const appRouts:Routes = [
   { path:'', redirectTo:'login', pathMatch:'full' },
   { path:'home', component:HomeComponent },
@@ -71,7 +77,13 @@ const appRouts:Routes = [
     UsersComponent,
     RegisterComponent,
     CustomPipe,
-    UserfilterPipe
+    UserfilterPipe,
+    CustomDirective,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    CompChildComponent
   ],
   imports: [
     BrowserModule,
@@ -85,6 +97,6 @@ const appRouts:Routes = [
     HttpClientModule
   ],
   providers: [HelperService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

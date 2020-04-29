@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs'
+import { Observable, Subject, BehaviorSubject } from 'rxjs'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -50,4 +51,7 @@ export class HelperService {
     data = JSON.stringify(data)
     return this.http.post<any>('http://127.0.0.1:5000/users/add_user/', data, {'headers':header});
   }
+
+  //subject_name = new Subject<any>()
+  subject_name = new BehaviorSubject('Mark W. T.')
 }

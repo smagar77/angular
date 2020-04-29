@@ -3,3 +3,31 @@
 <p>
   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 </p>
+<h5>Subject and Behaviour subject example:</h5>
+<div class="row">
+  <div class="col-mg-6">
+    <app-comp1 [subject_address]="subject_address"><div class="address">Address: {{subject_address}}</div></app-comp1>
+  </div>
+  <div class="col-mg-6">
+    <app-comp2 [subject_address]="subject_address"><div class="address">Address: {{subject_address}}</div></app-comp2>
+  </div>
+  <div class="col-mg-6">
+    <app-comp3 [subject_address]="subject_address"><div class="address">Address: {{subject_address}}</div></app-comp3>
+  </div>
+  <div class="col-mg-6">
+    <app-comp4 [subject_address]="subject_address"><div class="address">Address: {{subject_address}}</div></app-comp4>
+  </div>
+</div>
+<div #box>
+  <h5>Director thoughts</h5>
+  <div>
+    <h6>Name:{{dir_name}}</h6>
+  </div>
+  <p>
+    1914 translation by H. Rackham
+    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+  </p>
+  <app-comp-child></app-comp-child>
+</div>
+<button (click)="changeChildProp()" [ngStyle]="{'margin':'0 0 10px 0'}" class="btn btn-primary">Change Child Prop</button>
+<button (click)="callChildMethod()" [ngStyle]="{'margin':'0 0 10px 40px'}" class="btn btn-primary">Call Child Method</button>

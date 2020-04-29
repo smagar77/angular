@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CustomDirective } from '../../appDirectives/custom.directive'
 @Component({
   selector: 'app-top-nav',
   templateUrl: './top-nav.component.html',
@@ -23,6 +23,7 @@ export class TopNavComponent implements OnInit {
       this.login_status = true
       this.main_nav = [{ label:'Home', url:'home'},
       { label:'Users', url:'users'},
+      { label:'About Us', url:'about' },
       { label:'Contact Us', url:'contact'},
       { label:'Log Out', url:'logout'}]
     } else{
