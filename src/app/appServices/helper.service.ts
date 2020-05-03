@@ -30,13 +30,15 @@ export class HelperService {
     }
     var header = {'Content-Type':'application/json'}
     data = JSON.stringify(data)
-    return this.http.post<any>('http://127.0.0.1:5000/login/', data, {'headers':header});
+    return this.http.post('http://127.0.0.1:5000/login/', data, {'headers':header});
     //return this.http.get<any>('http://127.0.0.1:5000/users/');
   }
 
   //retrieves all users from backend
   get_users(){
-    return this.http.get<any>('http://localhost:5000/users/');
+    var access_token = window.localStorage.getItem('access_token');
+    var header = {'Content-Type':'application/json', 'Authorization':'Bearer '+access_token}
+    return this.http.get<any>('http://localhost:5000/users/', {'headers':header});
   }
 
   register(data){

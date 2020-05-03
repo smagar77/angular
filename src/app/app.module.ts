@@ -37,22 +37,23 @@ import { Comp2Component } from './about/comp2/comp2.component';
 import { Comp3Component } from './about/comp3/comp3.component';
 import { Comp4Component } from './about/comp4/comp4.component';
 import { CompChildComponent } from './about/comp-child/comp-child.component'
-const appRouts:Routes = [
-  { path:'', redirectTo:'login', pathMatch:'full' },
-  { path:'home', component:HomeComponent },
-  { path:'login', component:LoginComponent },
-  { path:'register', component:RegisterComponent },
-  { path:'logout', component:LogoutComponent },
-  { path:'users', component:UsersComponent},
-  { path:'matches', children:[
-    {path:'', component:MatchComponent},
-    {path:'matchdetails', component:MatchdetailsComponent},
-  ]},
-  { path:'about', component:AboutComponent },
-  { path:'contact', component:ContactComponent },
-  { path:'warning', component:WarningComponent },
-  { path:'**', component:PagenotfoundComponent },
-]
+import { MyComponent } from './mycomponent/mycomponent.component'
+// const appRouts:Routes = [
+//   { path:'', redirectTo:'login', pathMatch:'full' },
+//   { path:'home', component:HomeComponent },
+//   { path:'login', component:LoginComponent },
+//   { path:'register', component:RegisterComponent },
+//   { path:'logout', component:LogoutComponent },
+//   { path:'users', component:UsersComponent},
+//   { path:'matches', children:[
+//     {path:'', component:MatchComponent},
+//     {path:'matchdetails', component:MatchdetailsComponent},
+//   ]},
+//   { path:'about', component:AboutComponent },
+//   { path:'contact', component:ContactComponent },
+//   { path:'warning', component:WarningComponent },
+//   { path:'**', component:PagenotfoundComponent },
+// ]
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ const appRouts:Routes = [
     Comp2Component,
     Comp3Component,
     Comp4Component,
-    CompChildComponent
+    CompChildComponent,
+    MyComponent
   ],
   imports: [
     BrowserModule,
@@ -93,10 +95,10 @@ const appRouts:Routes = [
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
-    RouterModule.forRoot(appRouts),
+    //RouterModule.forRoot(appRouts),
     HttpClientModule
   ],
-  providers: [HelperService],
+  providers: [HelperService, ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

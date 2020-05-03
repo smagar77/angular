@@ -19,4 +19,13 @@ export class ContactComponent implements OnInit {
   }
   //ngSwitch case example for countrywise address
   country:string='india'
+  display_countries:boolean=true
+
+  //list of countries to use ng-container feature
+  other_countries:any = [
+    'UK',
+    'Canada',
+    'Belgium',
+    'Singapore'
+  ]
 }

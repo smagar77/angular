@@ -1,3 +1,4 @@
+<app-mycomponent></app-mycomponent>
 <div class="contact">
   <ul class="nav-container">
     <li [class.active]="country=='india'" ><a (click)="country='india'">India</a></li>
@@ -34,4 +35,11 @@
     </div>
     <div *ngSwitchDefault>None</div>
   </div>
+</div>
+<!--<input type="text" [(ngModel)]="sampletext">-->
+<!--<h2>{{sampletext}}</h2>-->
+<div class="other_countries">
+  <ng-container *ngIf="display_countries">
+    <div *ngFor="let country of other_countries">{{country}}</div>
+  </ng-container>
 </div>

@@ -1,5 +1,6 @@
 <div [ngStyle]="subscribe_style">
-  <input type="text" placeholder="Email Address" [(ngModel)]="email_address" /><button (click)="onSubscribe()">{{message? "Subscribed" : "Subscribe Now"}}</button>
+  <input type="text" placeholder="Email Address" [(ngModel)]="email_address" />
+  <button (click)="onSubscribe()">{{message? "Subscribed" : "Subscribe Now"}}</button>
   <div [ngStyle]="{'margin-top':'12px'}">
   <textarea #comment placeholder="Comment" type="text" value="{{email_address}}" (input)="onInputClick($event)" name="comment"></textarea>
     <div class="btn-group" [ngClass]="dropdown_class" dropdown>
