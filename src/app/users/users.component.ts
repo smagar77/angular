@@ -14,4 +14,8 @@ export class UsersComponent implements OnInit{
     this._helperservice.get_users()
     .subscribe(users => this.users=users)
   }
+  delete_user(user_id){
+
+  }
+
 }

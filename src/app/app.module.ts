@@ -37,7 +37,8 @@ import { Comp2Component } from './about/comp2/comp2.component';
 import { Comp3Component } from './about/comp3/comp3.component';
 import { Comp4Component } from './about/comp4/comp4.component';
 import { CompChildComponent } from './about/comp-child/comp-child.component'
-import { MyComponent } from './mycomponent/mycomponent.component'
+import { MyComponent } from './mycomponent/mycomponent.component';
+import { ProfileComponent } from './profile/profile.component'
 // const appRouts:Routes = [
 //   { path:'', redirectTo:'login', pathMatch:'full' },
 //   { path:'home', component:HomeComponent },
@@ -85,7 +86,8 @@ import { MyComponent } from './mycomponent/mycomponent.component'
     Comp3Component,
     Comp4Component,
     CompChildComponent,
-    MyComponent
+    MyComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

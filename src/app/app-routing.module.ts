@@ -12,7 +12,8 @@ import { MatchdetailsComponent } from './matchdetails/matchdetails.component';
 import { WarningComponent } from './warning/warning.component';
 import { LogoutComponent } from './logout/logout.component';
 import { UsersComponent } from './users/users.component';
-import { MyComponent } from './mycomponent/mycomponent.component'
+import { MyComponent } from './mycomponent/mycomponent.component';
+import { ProfileComponent } from './profile/profile.component';
 //routes defination
 const routes:Routes = [
   { path:'', redirectTo:'login', pathMatch:'full' },
@@ -20,10 +21,13 @@ const routes:Routes = [
   { path:'login', component:LoginComponent },
   { path:'register', component:RegisterComponent },
   { path:'logout', component:LogoutComponent },
-  { path:'users', component:UsersComponent},
+  { path:'users', children:[
+    { path:'', component:UsersComponent },
+    { path:'profile/:id', component:ProfileComponent }
+  ]},
   { path:'matches', children:[
     {path:'', component:MatchComponent},
-    {path:'matchdetails', component:MatchdetailsComponent},
+    {path:'deliveries/:id', component:MatchdetailsComponent},
   ]},
   { path:'about', component:AboutComponent },
   { path:'contact', component:ContactComponent },

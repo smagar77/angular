@@ -1,2 +1,54 @@
-<p>matchdetails works!</p>
 <a routerLinkActive="active" routerLink="/matches">Go back</a>
+<img *ngIf="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+<table>
+  <thead>
+    <tr>
+      <th>Sr#</th>
+      <th>Inning</th>
+      <th>Batting Team</th>
+      <th>Bowling Team</th>
+      <th>Over</th>
+      <th>Ball</th>
+      <th>Batsman</th>
+      <th>Non Striker</th>
+      <th>Bowler</th>
+      <th>Super Over?</th>
+      <th>Wide Runs</th>
+      <th>Bye Runs</th>
+      <th>Legbye Runs</th>
+      <th>Noball Runs</th>
+      <th>Penalty Runs</th>
+      <th>Batsman Runs</th>
+      <th>Extra Runs</th>
+      <th>Total Runs</th>
+      <th>Player Dismissed</th>
+      <th>Dismissal Kind</th>
+      <th>Fielder</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of deliveries_data; index as i">
+      <td>{{i+1}}</td>
+      <td>{{row.inning}}</td>
+      <td>{{row.batting_team}}</td>
+      <td>{{row.bowling_team}}</td>
+      <td>{{row.over}}</td>
+      <td>{{row.ball}}</td>
+      <td>{{row.batsman}}</td>
+      <td>{{row.non_striker}}</td>
+      <td>{{row.bowler}}</td>
+      <td>{{row.is_super_over}}</td>
+      <td>{{row.wide_runs}}</td>
+      <td>{{row.bye_runs}}</td>
+      <td>{{row.legbye_runs}}</td>
+      <td>{{row.noball_runs}}</td>
+      <td>{{row.penalty_runs}}</td>
+      <td>{{row.batsman_runs}}</td>
+      <td>{{row.extra_runs}}</td>
+      <td>{{row.total_runs}}</td>
+      <td>{{row.player_dismissed}}</td>
+      <td>{{row.dismissal_kind}}</td>
+      <td>{{row.fielder}}</td>
+    </tr>
+  </tbody>
+</table>
